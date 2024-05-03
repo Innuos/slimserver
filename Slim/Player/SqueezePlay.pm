@@ -237,10 +237,14 @@ sub pcm_sample_rates {
 		192000 => '<',
 		352800 => '=',
 		384000 => '>',
+		705600 => '?' ,
+		768000 => '@' ,
+		1411200 => 'A', 
+		1536000 => 'B',
 	);
-
+	
 	my $rate = $pcm_sample_rates{$track->samplerate()};
-
+	
 	return defined $rate ? $rate : '3';
 }
 
